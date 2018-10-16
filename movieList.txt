@@ -1,101 +1,50 @@
- “21 Jump Street” R act com cri 2012 69
- “22 Jump Street” R act com cri 2014 71
- “ 28 Days Later” R dra hor sci 2002 73
- “9” PG-13 ani act adv 2009 60
- “Across the Universe” PG-13 dra fan mus 2007 56
- “Aladdin” G ani adv com 1992 86
- “Almost Famous” R adv com dra 2000 90
- “Avatar” PG-13 act adv fan 2009 83
-“Avengers: Infinity War” PG-13 act adv fan 2018 68
- “Back to the Future III” PG adv com sci 1990 55
- “Back to the Future II” PG adv com sci 1989 57
- “Back to the Future” PG adv com sci 1985 87
- “Batman Begins” PG-13 act adv 2005 70
- “Beerfest” R com 2006 46
- “Black Hawk Down” R dra his war 2001 74
-“Black Panther” PG-13 act adv 2018 88
-“Catch Me if You Can” PG-13 bio cri dra 2002 75
- “Cloudy with a Chance of Meatballs” PG ani act adv 2009 66
- “Corpse Bride” PG ani dra fam 2005 83
- “Deadpool 2” R act adv com 2018 66
- “Deadpool” R act adv com 2016 65
-“ Dogma” R adv com dra 1999 62
-“Edward Scissorhands” PG-13 dra fan rom 1990 74
- “Elf” PG com fam fan 2003 64
- “Empire Records” PG-13 com dra mus 1995 30
- “Evil Dead” NC-17 hor 1981 70
- “Fantastic Mr. Fox” PG ani adv com 2009 83
-“Fear and Loathing in Las Vegas” R adv com dra 1998 41
-“Fight Club” R dra 1999 66
- “Forrest Gump” PG-13 dra rom 1994 82
- “Gone Baby Gone” R cri dra mys 2007 72
-“Halloween” R hor thr 1978 78
- “Hocus Pocus” PG com fam fan 1993 68
- “I Am Legend” PG-13 dra hor sci 2007 65
- “Inception” PG-13 act adv sci 2010 74
- “Indiana Jones and the Last Crusade” PG-13 act adv fan 1989 65
- “Indiana Jones and the Lost Ark” PG act adv 1981 85
- “Indiana Jones and the Temple of Doom” PG act adv 1984 57
- “Inglourious Basterds” R adv dra war 2009 69
-“Interstellar” PG-13 sci dra 2014 74
- “It” R dra hor thr 2017 69
-“Jumanji: Welcome to the Jungle” PG-13 com adv act rom 2017 58
-“Jurassic World” PG-13 act sci adv 2015 71
- “Kiss Kiss Bang Bang” R act com cri 2005 72
- “Legends of the Fall” R dra rom war 1994 45
- “Liar Liar” PG-13 com fan 1997 70
-“Moana” PG ani adv com fam 2016 81
-“Office Space” R com 1999 68
-“Passengers” PG-13 adv sci dra 2016 41
- “Pirates of the Caribbean: The Curse of the Black Pearl” PG-13 act adv fan 2003 63
- “Pulp Fiction” R cri dra 1994 94
-“Rango” PG ani adv com 2011 75
-“Ratatouille” G ani adv com 2007 96
-“Ready Player One” PG-13 act adv sci 2018 64
- “Saving Private Ryan” R dra war 1998 90
- “School of Rock” PG-13 com mus 2003 82
- “Selma” PG-13 bio dra his 2014 89
- “Seven” R cri dra mys 1995 65
-“She’s All That” PG-13 com rom 1999 51
-“Shrekt” PG ani fam rom com 2001 84
-“Solo: A Star Wars Story” PG-13 act adv fan 2018 62
-“Spider-Man: Homecoming” PG-13 act adv sci 2017 73
-“Star Wars: Episode IV- A New Hope” PG act adv fan 1977 90
-“Star Wars: Episode VI- Return of the Jedi” PG act adv fan 1983 58
-“Star Wars: Episode V- The Empire Strikes Back” PG act adv fan 1980 82
-“Step Brothers” R com 2008 51
- “Stranger than Fiction” PG-13 com dra fan 2006 67
- “Suicide Squad” PG-13 act adv fan 2016 40
- “Super Troopers” R com cri mys 2001 48
- “The Big Lebowski” R com cri 1998 71
- “The Boondock Saints” R act cri thr 1999 44
-“The Conjuring” R hor mys thr 2013 68
- “The Crazies” R hor thr 2010 55
- “The Dark Knight Rises” PG-13 act thr 2012 78
- “The Dark Knight” PG-13 act cri dra 2008 84
-“The Departed” R cri dra thr 2006 85
- “The Devil’s Rejects” R cri hor 2005 53
-“The Founder” PG-13 bio dra his 2016 66
- “The Frighteners” R com fan hor 1996 71
- “The Grand Budapest Hotel” R adv com dra 2014 88
- “The Green Mile” R cri dra fan 1999 61
-“The Grudge” PG-13 hor mys thr 2004 49
- “The Hangover” R com 2009 73
- “The Hills Have Eyes” R Hor Thr 2006 52
-“The Hobbit: An Unexpected Journey” PG-13 adv fam fan 2012 58
-“The Incredibles” PG ani com act fam 2004 90
- “The Little Mermaid” G ani fam fan 1989 88
- “The Matrix” R act sci 1999 73
- “The Muppet Christmas Carol” G com dra fam 1992 64
- “The Prestige” PG-13 dra mys sci 2006 66
- “The Rescuers” G ani adv com 1977 74
- “The Revenant” R act adv bio 2015 76
- “The Ring” PG-13 hor mys 2002 57
- “ The Rum Diary” R com dra 2011 56
- “The Shining” R dra hor 1980 63
- “The Silence of the Lambs” R cri dra thr 1991 85
- “The Wolf of Wall Street” R bio com cri 2013 75
- “Titan A.E.” PG ani act adv 2000 48
-“Toy Story” G ani adv com 1995 95
-“Watchmen” R act dra mys 2009 56
- “Zodiac” R cri dra mys 2007 78
+21 Jump Street
+R
+act com cri
+2012
+69
+22 Jump Street
+R
+act com cri
+2014
+71
+28 Days Later
+R
+dra hor sci
+2002
+73
+9
+PG-13
+ani act adv
+2009
+60
+Across the Universe
+PG-13
+dra fan mus
+2007
+56
+Aladdin
+G
+ani adv com
+1992
+86
+Almost Famous
+R
+adv com dra
+2000
+90
+Avatar
+PG-13
+act adv fan
+2009
+83
+Avengers: Age of Ultron
+PG-13
+act adv fan
+2015
+66
+Avengers: Infinity War
+PG-13
+act adv fan
+2018
+68

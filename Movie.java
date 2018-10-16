@@ -43,4 +43,9 @@ public class Movie {
 	public int getScore() {
 		return score;
 	}
+	
+	public String toString() {
+		String s = title + "-" + rating + "-" + genre + "-" + year + "-" + score;
+		return s;
+	}
 }

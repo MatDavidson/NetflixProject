@@ -25,7 +25,7 @@ dra fan mus
 56
 Aladdin
 G
-ani adv com
+ani adv com fam
 1992
 86
 Almost Famous
@@ -35,7 +35,7 @@ adv com dra
 90
 Avatar
 PG-13
-act adv fan
+act adv fan sci
 2009
 83
 Avengers: Age of Ultron

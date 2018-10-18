@@ -70,11 +70,145 @@ public class Netflix {
 				
 				m = new Movie (title, rating, genre, year, score);
 				all.add(m);
+				catSort(m);
 			}
 			scan.close();
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void catSort(Movie m) {
+		String[] genres = m.getGenre().split(" ");
+		for (int i = 0; i < genres.length; i++) {
+			switch (genres[i]) {
+
+			case "act":
+				act.addLast(m);
+				continue;
+
+			case "adv":
+				adv.addLast(m);
+				continue;
+
+			case "ani":
+				ani.addLast(m);
+				continue;
+
+			case "bio":
+				bio.addLast(m);
+				continue;
+
+			case "com":
+				com.addLast(m);
+				continue;
+
+			case "cri":
+				cri.addLast(m);
+				continue;
+
+			case "dra":
+				dra.addLast(m);
+				continue;
+
+			case "fam":
+				fam.addLast(m);
+				continue;
+
+			case "fan":
+				fan.addLast(m);
+				continue;
+				
+			case "his":
+				his.addLast(m);
+				continue;
+				
+			case "hor":
+				hor.addLast(m);
+				continue;
+				
+			case "mus":
+				mus.addLast(m);
+				continue;
+				
+			case "mys":
+				mys.addLast(m);
+				continue;
+				
+			case "rom":
+				rom.addLast(m);
+				continue;
+				
+			case "sci":
+				sci.addLast(m);
+				continue;
+				
+			case "sus":
+				sus.addLast(m);
+				continue;
+				
+			case "thr":
+				thr.addLast(m);
+				continue;
+				
+			case "war":
+				war.addLast(m);
+				continue;
+				
+//			case "":
+//				.addLast(m);
+//				continue;
+			}
+		}
+	}
+	
+	public CircularDoublyLinkedList<Movie> commonMovies(CircularDoublyLinkedList<Movie> list1, CircularDoublyLinkedList<Movie> list2){
+		CircularDoublyLinkedList<Movie> result = new CircularDoublyLinkedList<Movie>("Result");
+		Node<Movie> list1Ptr = list1.getHead();
+		Node<Movie> list2Ptr = list2.getHead();
+		Node<Movie> list2Start = list2Ptr;
+		int l2SCount = 0;
+		int addCount = 0;
+		String t1 = "";
+		String t2 = "";
+		Movie m1, m2;
+		
+		for(int i = 0; i < list1.getSize(); i++) {
+			m1 = list1Ptr.getElement();
+			t1 = m1.getTitle();
+			list2Ptr = list2Start;
+			for(int j = l2SCount; j < list2.getSize(); j++){
+				m2 = list2Ptr.getElement();
+				if(m1 == m2) {
+					result.addLast(m1);
+					addCount++;
+					l2SCount += addCount;
+					list2Start = list2Ptr;
+					break;
+				}
+				t2 = m2.getTitle();
+				if(t1.compareTo(t2) == 1)
+					break;
+				list2Ptr = list2Ptr.getNext();
+			}
+			
+//			while(title1.charAt(0) < list2Ptr.getElement().getTitle().charAt(0) && list2Ptr.getNext() != list2.getHead()) {
+//				if(title1.equals(list2Ptr.getElement().getTitle())){
+//					result.addLast(list1Ptr.getElement());
+//					list2Start = list2Ptr;
+//					break;
+//				}
+//				list2Ptr = list2Ptr.getNext();
+//			}
+		}
+		
+		
+		return result;
+	}
+	
+	@SuppressWarnings("rawtypes")
+	public CircularDoublyLinkedList<CircularDoublyLinkedList> getCategories() {
+		return categories;
 	}
 }

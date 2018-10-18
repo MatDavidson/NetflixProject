@@ -253,5 +253,13 @@ public class CircularDoublyLinkedList<E> {
 	public String toString() {
 		return name;
 	}
+	
+	public Node<E> getHead(){
+		return head;
+	}
+	
+	public Node<E> getTail(){
+		return tail;
+	}
 }
 	

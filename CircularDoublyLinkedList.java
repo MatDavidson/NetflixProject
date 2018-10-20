@@ -224,7 +224,7 @@ public class CircularDoublyLinkedList<E> {
 	
 	public String display() {
 		StringBuilder sB = new StringBuilder();
-		sB.append("\tCircular Doubly Linked List: ");
+		sB.append("\n\t**********\n\t" + name + ": ");
 		
 		if (size == 0) {
 			sB.append("empty.");
@@ -232,7 +232,7 @@ public class CircularDoublyLinkedList<E> {
 		}
 			
 		Node<E> current = head;
-		sB.append(size);
+		sB.append(size + "\n\t**********");
 		sB.append("\n\t" + current.getElement().toString());
 		
 		if (current.getNext() == current)

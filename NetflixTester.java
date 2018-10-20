@@ -24,9 +24,12 @@ public class NetflixTester {
 		CircularDoublyLinkedList<Movie> act = netflix.getCategories().getHead().getElement();
 		@SuppressWarnings("unchecked")
 		CircularDoublyLinkedList<Movie> adv = netflix.getCategories().getHead().getNext().getElement();
-		CircularDoublyLinkedList<Movie> res = netflix.commonMovies(act, adv);
 		
-		System.out.print("\n\n\t" + res.getName() + ": " + res.getSize());
+		System.out.print(act.display());
+		System.out.print(adv.display());
+		
+		CircularDoublyLinkedList<Movie> res = netflix.commonMovies(act, adv);
+		System.out.print(res.display());
 	}
 
 }

@@ -23,9 +23,11 @@ public class Netflix {
 	CircularDoublyLinkedList<Movie> mys = new CircularDoublyLinkedList<Movie>("Mystery");
 	CircularDoublyLinkedList<Movie> rom = new CircularDoublyLinkedList<Movie>("Romance");
 	CircularDoublyLinkedList<Movie> sci = new CircularDoublyLinkedList<Movie>("Science Fiction");
+	CircularDoublyLinkedList<Movie> spo = new CircularDoublyLinkedList<Movie>("Sports");
 	CircularDoublyLinkedList<Movie> sus = new CircularDoublyLinkedList<Movie>("Suspense");
 	CircularDoublyLinkedList<Movie> thr = new CircularDoublyLinkedList<Movie>("Thriller");
 	CircularDoublyLinkedList<Movie> war = new CircularDoublyLinkedList<Movie>("War");
+	CircularDoublyLinkedList<Movie> wes = new CircularDoublyLinkedList<Movie>("Western");
 	
 	ArrayList<Movie> all = new ArrayList<Movie>();
 	
@@ -45,9 +47,11 @@ public class Netflix {
 		this.categories.addLast(mys);
 		this.categories.addLast(rom);
 		this.categories.addLast(sci);
+		this.categories.addLast(spo);
 		this.categories.addLast(sus);
 		this.categories.addLast(thr);
 		this.categories.addLast(war);
+		this.categories.addLast(wes);
 		addAll();				
 	}
 	
@@ -144,6 +148,10 @@ public class Netflix {
 				sci.addLast(m);
 				continue;
 				
+			case "spo":
+				spo.addLast(m);
+				continue;
+				
 			case "sus":
 				sus.addLast(m);
 				continue;
@@ -156,6 +164,10 @@ public class Netflix {
 				war.addLast(m);
 				continue;
 				
+			case "wesr":
+				wes.addLast(m);
+				continue;
+				
 //			case "":
 //				.addLast(m);
 //				continue;
@@ -165,7 +177,7 @@ public class Netflix {
 	
 	public CircularDoublyLinkedList<Movie> commonMovies(CircularDoublyLinkedList<Movie> list1, CircularDoublyLinkedList<Movie> list2){
 		CircularDoublyLinkedList<Movie> result = new CircularDoublyLinkedList<Movie>("Result");
-		Node<Movie> list1Ptr = list1.getHead();
+		Node<Movie> list1Ptr = list1.getTail();
 		Node<Movie> list2Ptr = list2.getHead();
 		Node<Movie> list2Start = list2Ptr;
 		int l2SCount = 0;
@@ -175,22 +187,26 @@ public class Netflix {
 		Movie m1, m2;
 		
 		for(int i = 0; i < list1.getSize(); i++) {
-			m1 = list1Ptr.getElement();
-			t1 = m1.getTitle();
+			list1Ptr = list1Ptr.getNext();
+			t1 = list1Ptr.getElement().getTitle();
 			list2Ptr = list2Start;
-			for(int j = l2SCount; j < list2.getSize(); j++){
-				m2 = list2Ptr.getElement();
-				if(m1 == m2) {
-					result.addLast(m1);
-					addCount++;
+			t2 = list2Ptr.getElement().getTitle();
+			for(int j = l2SCount; j < list2.getSize(); j++){		
+				if(t1.compareTo(t2) == 0) {
+					result.addLast(list1Ptr.getElement());
 					l2SCount += addCount;
 					list2Start = list2Ptr;
+					addCount = 0;
 					break;
 				}
-				t2 = m2.getTitle();
-				if(t1.compareTo(t2) == 1)
+				else if(t1.compareTo(t2) > 0) {
+					addCount++;
+					list2Ptr = list2Ptr.getNext();
+					t2 = list2Ptr.getElement().getTitle();
+				}
+				else {
 					break;
-				list2Ptr = list2Ptr.getNext();
+				}
 			}
 			
 //			while(title1.charAt(0) < list2Ptr.getElement().getTitle().charAt(0) && list2Ptr.getNext() != list2.getHead()) {

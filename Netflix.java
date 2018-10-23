@@ -31,6 +31,7 @@ public class Netflix {
 	
 	ArrayList<Movie> all = new ArrayList<Movie>();
 	
+	//Constructor that creates a Netflix object and initializes its lists. It finishes by building the all list.
 	public Netflix() {
 		this.categories.addLast(act);
 		this.categories.addLast(adv);
@@ -55,6 +56,7 @@ public class Netflix {
 		addAll();				
 	}
 	
+	//Builds the master list of movies as well as sorts the movies into their proper categories.
 	private void addAll() {
 		File file = new File("src\\Netflix\\movieList.txt");
 		String title = "";
@@ -83,6 +85,8 @@ public class Netflix {
 		}
 	}
 	
+	//This method extracts the genre string from a movie object and splits it into tokens. It then checks them against
+	//	a switch and adds the movie to each category listed
 	public void catSort(Movie m) {
 		String[] genres = m.getGenre().split(" ");
 		for (int i = 0; i < genres.length; i++) {
@@ -164,7 +168,7 @@ public class Netflix {
 				war.addLast(m);
 				continue;
 				
-			case "wesr":
+			case "wes":
 				wes.addLast(m);
 				continue;
 				
@@ -175,51 +179,47 @@ public class Netflix {
 		}
 	}
 	
+	
+	//This method iterates over list1 and determines what movies it has in common with list2 while adding those movies to a result list
 	public CircularDoublyLinkedList<Movie> commonMovies(CircularDoublyLinkedList<Movie> list1, CircularDoublyLinkedList<Movie> list2){
 		CircularDoublyLinkedList<Movie> result = new CircularDoublyLinkedList<Movie>("Result");
 		Node<Movie> list1Ptr = list1.getTail();
 		Node<Movie> list2Ptr = list2.getHead();
-		Node<Movie> list2Start = list2Ptr;
+		Node<Movie> list2Start = list2Ptr;		//Holds the place of the last movie in list2 added to result
 		int l2SCount = 0;
-		int addCount = 0;
+		int addCount = 0;						//These two integers help determine the position of our list2 placeholder 
 		String t1 = "";
-		String t2 = "";
-		Movie m1, m2;
+		String t2 = "";							//These strings hold our movie titles to be compared 
 		
+		//Iterate over list1, storing the title of the movie in t1. This requires that all category lists are sorted alphabetically.
 		for(int i = 0; i < list1.getSize(); i++) {
 			list1Ptr = list1Ptr.getNext();
 			t1 = list1Ptr.getElement().getTitle();
-			list2Ptr = list2Start;
+			
+			//Set the pointer for list2 as the list2 placeholder and the title of that movie in t2
+			list2Ptr = list2Start;	
 			t2 = list2Ptr.getElement().getTitle();
-			for(int j = l2SCount; j < list2.getSize(); j++){		
-				if(t1.compareTo(t2) == 0) {
-					result.addLast(list1Ptr.getElement());
-					l2SCount += addCount;
-					list2Start = list2Ptr;
-					addCount = 0;
-					break;
+			
+			//Iterate over list2 starting from the list2 placeholder
+			for(int j = l2SCount; j < list2.getSize(); j++){
+				//Compare the titles of the movies
+				if(t1.compareTo(t2) == 0) { 				//Match case
+					result.addLast(list1Ptr.getElement());	//Add the movie to the result list
+					l2SCount += addCount;					//Add the value of addCount to l2Start to keep up with our place
+					list2Start = list2Ptr;					//Update our list2 placeholder
+					addCount = 0;							//Reset addCount
+					break;									//Exit the inner loop
 				}
-				else if(t1.compareTo(t2) > 0) {
-					addCount++;
-					list2Ptr = list2Ptr.getNext();
-					t2 = list2Ptr.getElement().getTitle();
+				else if(t1.compareTo(t2) > 0) {				//No match, but t1 comes before t2
+					addCount++;								//Increment addCount
+					list2Ptr = list2Ptr.getNext();			//Move to the next movie in list2
+					t2 = list2Ptr.getElement().getTitle();	//Update t2
 				}
-				else {
+				else {										//Once the value of t1 becomes greater than t2 (alphabetically), exit the loop
 					break;
 				}
 			}
-			
-//			while(title1.charAt(0) < list2Ptr.getElement().getTitle().charAt(0) && list2Ptr.getNext() != list2.getHead()) {
-//				if(title1.equals(list2Ptr.getElement().getTitle())){
-//					result.addLast(list1Ptr.getElement());
-//					list2Start = list2Ptr;
-//					break;
-//				}
-//				list2Ptr = list2Ptr.getNext();
-//			}
 		}
-		
-		
 		return result;
 	}
 	

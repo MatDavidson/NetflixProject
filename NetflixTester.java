@@ -13,6 +13,7 @@ public class NetflixTester {
 			System.out.println(m.toString());
 		}
 		
+		@SuppressWarnings("rawtypes")
 		Node<CircularDoublyLinkedList> ptr = netflix.getCategories().getHead();
 		for(int i = 0; i < netflix.categories.getSize(); i ++) {
 			if(ptr.getElement().getSize() > 0)

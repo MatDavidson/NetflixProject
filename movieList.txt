@@ -48,3 +48,163 @@ PG-13
 act adv fan
 2018
 68
+Inglourious Basterds
+R
+adv dra war
+2009
+69
+Interstellar
+PG-13
+sci dra
+2014
+74
+Invictus
+PG-13
+bio dra his
+2009
+74
+It
+R
+dra hor thr
+2017
+69
+James and the Giant Peach
+PG
+ani adv fam
+1996
+67
+Joe Dirt
+PG-13
+adv com dra
+2001
+20
+Jumanji: Welcome to the Jungle
+PG-13
+com adv act rom
+2017
+58
+Jurassic World
+PG-13
+act sci adv
+2015
+71
+Just Friends
+PG-13
+com rom
+2005
+47
+Kick-Ass
+R
+act com dra
+2010
+66
+Kill Bill: Vol. 1
+R
+act cri thr
+2003
+69
+Rush Hour 3
+PG-13
+act com cri
+2007
+18
+Saving Private Ryan
+R
+dra war
+1998
+90
+Scary Movie
+R
+com hor
+2000
+48
+School of Rock
+PG-13
+com mus
+2003
+82
+Scott Pilgrim vs. the World
+PG-13
+act com fan
+2010
+69
+Selma
+PG-13
+bio dra his
+2014
+89
+Seven
+R
+cri dra mys
+1995
+65
+Shaun of the Dead
+R
+com hor
+2004
+76
+She’s All That
+PG-13
+com rom
+1999
+51
+Shrek
+PG
+ani fam rom com
+2001
+84
+True Grit
+PG-13
+adv dra wes
+2010
+80
+V for Vendetta
+R
+act dra sci
+2005
+62
+Waiting...
+R
+com
+2005
+30
+Wanted
+R
+act cri fan
+2008
+64
+War of the Worlds
+PG-13
+adv sci thr
+2005
+73
+Watchmen
+R
+act dra mys
+2009
+56
+We Were Soldiers
+R
+act dra his war
+2002
+65
+Willy Wonka and the Chocolate Factory
+G
+fam fan mus
+1971
+67
+Yes Man
+PG-13
+com rom
+2008
+46
+Zodiac
+R
+cri dra mys
+2007
+78
+Zombieland
+R
+adv com hor
+2009
+73

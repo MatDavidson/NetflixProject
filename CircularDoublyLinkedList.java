@@ -92,47 +92,10 @@ public class CircularDoublyLinkedList<E> {
 		size++;
 	}
 	
-	//Adds Node n to the head of the list
-	public void addFirst(Node<E> n) {
-		if(head == null) {
-			n.setNext(n);
-			n.setPrev(n);		
-			head = n;
-			tail = n;
-		}
-		else {
-			n.setPrev(tail);
-			tail.setNext(n);
-			head.setPrev(n);
-			n.setNext(head);
-			head = n;
-		}
-		size++;
-	}
-	
 	//Adds a new node of element e to the end of the list.
 	public void addLast(E e) {
 		Node<E> n = new Node<E>(e);
 		
-		if(tail == null) {
-			n.setNext(n);
-			n.setPrev(n);		
-			head = n;
-			tail = n;
-		}
-		else {
-			n.setPrev(tail);
-			tail.setNext(n);
-			head.setPrev(n);
-			n.setNext(head);
-			tail = n;
-		}
-		size++;
-	}
-	
-	
-	//Adds Node n to the end of the list.
-	public void addLast(Node<E> n) {
 		if(tail == null) {
 			n.setNext(n);
 			n.setPrev(n);		
@@ -194,7 +157,7 @@ public class CircularDoublyLinkedList<E> {
 				
 				Node<E> node2 = node1.getNext();		//Creates a pointer to node 2
 				
-				Node<E> newNode = n; 		//Creates newNode 
+				Node<E> newNode = n; 					//Creates newNode 
 				
 				node1.setNext(newNode);					//Sets node1's next pointer to newNode
 				

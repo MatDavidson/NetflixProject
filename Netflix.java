@@ -223,6 +223,10 @@ public class Netflix {
 		return result;
 	}
 	
+	public Movie searchAll(String s) {
+		
+	}
+	
 	@SuppressWarnings("rawtypes")
 	public CircularDoublyLinkedList<CircularDoublyLinkedList> getCategories() {
 		return categories;

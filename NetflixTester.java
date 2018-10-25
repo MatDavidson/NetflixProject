@@ -31,6 +31,20 @@ public class NetflixTester {
 		
 		CircularDoublyLinkedList<Movie> res = netflix.commonMovies(act, adv);
 		System.out.print(res.display());
+		
+		System.out.print(netflix.com.display());
+		System.out.print(netflix.dra.display());
+		
+		CircularDoublyLinkedList<Movie> res2 = netflix.commonMovies(netflix.com, netflix.dra);
+		System.out.print(res2.display());
+		
+		CircularDoublyLinkedList<Movie> res3 = netflix.commonMovies(netflix.com, adv);
+		System.out.print(res3.display());
+		
+		System.out.print("\n\n********************************************");
+		for(Movie m: netflix.searchAll("a")) {
+			System.out.print("\n\t" + m.toString());
+		}
 	}
 
 }

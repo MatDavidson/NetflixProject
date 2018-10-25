@@ -223,8 +223,15 @@ public class Netflix {
 		return result;
 	}
 	
-	public Movie searchAll(String s) {
+	public ArrayList<Movie> searchAll(String s) {
+		ArrayList<Movie> result = new ArrayList<Movie>();
 		
+		for(Movie m: all) {
+			if (m.getTitle().contains(s)) {
+				result.add(m);
+			}	
+		}
+		return result;
 	}
 	
 	@SuppressWarnings("rawtypes")

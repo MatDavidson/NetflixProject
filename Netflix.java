@@ -221,7 +221,7 @@ public class Netflix {
 		ArrayList<Movie> result = new ArrayList<Movie>();
 		
 		for(Movie m: all) {
-			if (m.getTitle().contains(s)) {
+			if (m.getTitle().toLowerCase().contains(s.toLowerCase())) {
 				result.add(m);
 			}	
 		}

@@ -7,25 +7,55 @@ act com cri
 R
 act com cri
 2014
-71
+7
 28 Days Later
 R
 dra hor sci
 2002
 73
+28 Weeks Later
+R
+dra hor sci
+2007
+78
+3:10 to Yuma
+R
+act adv cri wes
+2007
+76
+300
+R
+act fan
+2006
+52
+3 Ninjas
+PG
+act com fam
+1992
+36
 9
 PG-13
 ani act adv
 2009
 60
+Accepted
+PG-13
+com
+2006
+47
 Across the Universe
 PG-13
 dra fan mus
 2007
 56
-Aladdin
+A Goofy Movie
 G
 ani adv com fam
+1995
+68
+Aladdin
+G
+ani adv com
 1992
 86
 Almost Famous
@@ -33,9 +63,29 @@ R
 adv com dra
 2000
 90
+Angels in the Outfield
+PG
+com fam fan spo
+1994
+44
+Ant-Man and the Wasp
+PG-13
+act adv com sci
+2018
+88
+Ant-Man
+PG-13
+act adv com sci
+2015
+81
+Army of Darkness
+R
+com fan hor
+1992
+57
 Avatar
 PG-13
-act adv fan sci
+act adv fan
 2009
 83
 Avengers: Age of Ultron
@@ -48,6 +98,296 @@ PG-13
 act adv fan
 2018
 68
+Avengers
+PG-13
+act adv fan
+2012
+69
+Back to the Future III
+PG
+adv com sci
+1990
+55
+Back to the Future II
+PG
+adv com sci
+1989
+57
+Back to the Future
+PG
+adv com sci
+1985
+87
+Bad Boys
+R
+act com cri
+1995
+41
+Batman Begins
+PG-13
+act adv
+2005
+70
+Beerfest
+R
+com
+2006
+46
+Big Fish
+PG-13
+adv dra fan
+2003
+58
+Billy Madison
+PG-13
+com
+1995
+16
+Black Hawk Down
+R
+dra his war
+2001
+74
+Black Panther
+PG-13
+act adv
+2018
+88
+Blazing Saddles
+R
+com wes
+1974
+73
+Blood Diamond
+R 
+adv dra thr
+2006
+64
+Bruce Almighty
+PG-13
+com dra fan
+2003
+46
+Captain America: Civil War
+PG-13
+act adv
+2016
+91
+Captain America: The First Avenger
+PG-13
+act adv
+2011
+80
+Captain America: The Winter Soldier
+PG-13
+act adv
+2014
+89
+Catch Me if You Can
+PG-13
+bio cri dra
+2002
+75
+Cloudy with a Chance of Meatballs
+PG
+ani act adv
+2009
+66
+Coach Carter
+PG-13
+bio dra spo
+2005
+57
+Corpse Bride
+PG
+ani dra fam
+2005
+83
+Deadpool 2
+R
+act adv com
+2018
+66
+Deadpool
+R
+act adv com
+2016
+65
+Django Unchained
+R
+dra wes
+2012
+81
+Dodgeball: A True Underdog Story
+PG-13
+com spo
+2004
+55
+Dogma
+R
+adv com dra
+1999
+62
+Dude, Whereâ€™s My Car?
+PG-13
+com mys sci
+2000
+30
+Dumb and Dumber
+PG-13
+com
+1994
+41
+Edward Scissorhands
+PG-13
+dra fan rom
+1990
+74
+Elf
+PG
+com fam fan
+2003
+64
+Empire Records
+PG-13
+com dra mus
+1995
+30
+Enemy of the State
+R
+act cri mys
+1998
+6
+Evil Dead
+NC-17
+hor
+1981
+70
+Fantasia
+G
+ani fam fan
+1940
+78
+Fantastic Mr. Fox
+PG
+ani adv com
+2009
+83
+Fear and Loathing in Las Vegas
+R
+adv com dra
+1998
+41
+Fight Club
+R
+dra
+1999
+66
+Forrest Gump
+PG-13
+dra rom
+1994
+82
+Friday Night Lights
+PG-13
+act dra spo
+2004
+70
+Friday
+R
+com dra
+1995
+74
+Fun with Dick and Jane
+PG-13
+com cri
+2005
+47
+Gone Baby Gone
+R
+cri dra mys
+2007
+72
+Grandma's Boy
+R
+com
+2006
+33
+Halloween
+R
+hor thr
+1978
+78
+Happy Gilmore
+PG-13
+com spo
+1996
+31
+Harold and Kumar Escape From Guantanamo Bay
+R
+com adv
+2008
+52
+Harold and Kumar Go To White Castle
+R
+adv com
+2004
+64
+Hocus Pocus
+PG
+com fam fan
+1993
+68
+Honey, I Shrunk the Kids
+PG
+adv com fam
+1989
+63
+Hook
+PG
+adv com fam
+1991
+52
+Hoosiers
+PG
+dra spo
+1986
+76
+Hot Fuzz
+R
+act com
+2007
+81
+I, Robot
+PG-13
+act cri dra
+2004
+59
+I Am Legend
+PG-13
+dra hor sci
+2007
+65
+Inception
+PG-13
+act adv sci
+2010
+74
+Indiana Jones and the Last Crusade
+PG-13
+act adv fan
+1989
+65
+Indiana Jones and the Lost Ark
+PG
+act adv
+1981
+85
+Indiana Jones and the Temple of Doom
+PG
+act adv
+1984
+57
 Inglourious Basterds
 R
 adv dra war
@@ -83,6 +423,11 @@ PG-13
 com adv act rom
 2017
 58
+Jurassic Park
+PG-13
+adv sci thr
+1993
+68
 Jurassic World
 PG-13
 act sci adv
@@ -103,11 +448,161 @@ R
 act cri thr
 2003
 69
+Kiss Kiss Bang Bang
+R
+act com cri
+2005
+72
+Labyrinth
+PG
+adv fam fan
+1986
+50
+Legends of the Fall
+R
+dra rom war wes
+1994
+45
+Liar Liar
+PG-13
+com fan
+1997
+70
+Little Giants
+PG
+com fam spo
+1994
+64
+Logan
+R
+act dra sci
+2017
+77
+Lord of War
+R
+cri dra thr
+2005
+62
+Major League
+R
+com spo
+1989
+62
+Men in Black
+PG-13
+adv com mys sci
+1997
+71
+Moana
+PG
+ani adv com fam
+2016
+81
+Monster
+R
+bio cri dra
+2003
+74
+Monty Python and the Holy Grail
+PG
+adv com fan
+1975
+93
+Mrs. Doubtfire
+PG-13
+com dra fam
+1993
+53
+Napoleon Dynamite
+PG
+com
+2004
+64
+Next Friday
+R
+com
+2000
+22
+Office Space
+R
+com
+1999
+68
+Oliver & Company
+PG
+ani adv com
+1988
+44
+Osmosis Jones
+PG
+ani act
+2001
+55
+Passengers
+PG-13
+adv sci dra
+2016
+41
+Pirates of the Caribbean: The Curse of the Black Pearl
+PG-13
+act adv fan
+2003
+63
+Planet of the Apes
+PG-13
+act adv sci
+2001
+50
+Pulp Fiction
+R
+cri dra
+1994
+94
+Rango
+PG
+ani act adv com fam wes
+2011
+75
+Ratatouille
+G
+ani adv com
+2007
+96
+Ready Player One
+PG-13
+act adv sci
+2018
+64
+RED
+PG-13
+act com cri
+2010
+60
+Remember the Titans
+PG
+bio dra spo
+2000
+48
+Running Scared
+R
+act cri dra
+2006
+41
+Rush Hour 2
+PG-13
+act com cri
+2001
+48
 Rush Hour 3
 PG-13
 act com cri
 2007
 18
+Rush Hour
+PG-13
+act com cri
+1998
+60
 Saving Private Ryan
 R
 dra war
@@ -143,21 +638,326 @@ R
 com hor
 2004
 76
-She’s All That
+She's All That
 PG-13
 com rom
 1999
 51
+Shrek 2
+PG
+ani fam rom com
+2004
+88
 Shrek
 PG
 ani fam rom com
 2001
 84
+Shutter Island
+R
+mys thr
+2010
+63
+Solo: A Star Wars Story
+PG-13
+act adv fan
+2018
+62
+Spider-Man: Homecoming
+PG-13
+act adv sci
+2017
+73
+Star Wars: Episode IV- A New Hope
+PG
+act adv fan
+1977
+90
+Star Wars: Episode VI- Return of the Jedi
+PG
+act adv fan
+1983
+58
+Star Wars: Episode V- The Empire Strikes Back
+PG
+act adv fan
+1980
+82
+Step Brothers
+R
+com
+2008
+51
+Stranger than Fiction
+PG-13
+com dra fan
+2006
+67
+Suicide Squad
+PG-13
+act adv fan
+2016
+40
+Superbad
+R
+com
+2007
+76
+Super Troopers
+R
+com cri mys
+2001
+48
+Talladega Nights: The Ballad of Ricky Bobby
+PG-13
+com spo
+2006
+66
+The 40-Year-Old Virgin
+R
+com rom
+2005
+73
+The Big Lebowski
+R
+com cri
+1998
+71
+The Boondock Saints
+R
+act cri thr
+1999
+44
+The Conjuring
+R
+hor mys thr
+2013
+68
+The Crazies
+R
+hor thr
+2010
+55
+The Dark Knight
+PG-13
+act cri dra
+2008
+84
+The Dark Knight Rises
+PG-13
+act thr
+2012
+78
+The Dark Tower
+PG-13
+act adv fan wes
+2017
+34
+The Departed
+R
+cri dra thr
+2006
+85
+The Devil's Rejects
+R
+cri hor
+2005
+53
+The Founder
+PG-13
+bio dra his
+2016
+66
+The Frighteners
+R
+com fan hor
+1996
+71
+The Grand Budapest Hotel
+R
+adv com dra
+2014
+88
+The Green Mile
+R
+cri dra fan
+1999
+61
+The Grudge
+PG-13
+hor mys thr
+2004
+49
+The Hangover
+R
+com
+2009
+73
+The Hateful Eight
+R
+cri dra mys wes
+2015
+68
+The Hills Have Eyes
+R
+hor thr
+2006
+52
+The Hobbit: An Unexpected Journey
+PG-13
+adv fam fan
+2012
+58
+The Incredibles
+PG
+ani com act fam
+2004
+90
+The Iron Giant
+PG
+ani act adv sci fam
+1999
+85
+The Jerk
+R
+com
+1979
+85
+The Little Mermaid
+G
+ani fam fan
+1989
+88
+The Longest Yard
+PG-13
+com cri spo
+2005
+48
+The Matrix
+R
+act sci
+1999
+73
+The Muppet Christmas Carol
+G
+com dra fam
+1992
+64
+The NeverEnding Story
+PG
+adv dra fam
+1984
+46
+The Patriot
+R
+act dra his war
+2000
+63
+The Prestige
+PG-13
+dra mys sci
+2006
+66
+The Rescuers
+G
+ani adv com
+1977
+74
+The Revenant
+R
+act adv bio
+2015
+76
+The Ring
+PG-13
+hor mys
+2002
+57
+The Rum Diary
+R
+com dra
+2011
+56
+The Shining
+R
+dra hor
+1980
+63
+The Silence of the Lambs
+R
+cri dra thr
+1991
+85
+The Waterboy
+PG-13
+com spo
+1998
+41
+The Wolf of Wall Street
+R
+bio com cri
+2013
+75
+Thor: Ragnarok
+PG-13
+act adv sci com
+2017
+92
+Thor: The Dark World
+PG-13
+act adv sci
+2013
+66
+Thor
+PG-13
+act adv sci
+2011
+77
+Three Kings
+R
+act adv com war
+1999
+82
+Titan A.E.
+PG
+ani act adv
+2000
+48
+Tombstone
+R
+act bio dra wes
+1993
+50
+Tommy Boy
+PG-13
+adv com
+1995
+46
+Toy Story
+G
+ani adv com
+1995
+95
+Tropic Thunder
+R
+act adv com
+2008
+71
+Troy
+R
+dra his rom
+2004
+56
 True Grit
 PG-13
 adv dra wes
 2010
 80
+Twister
+PG-13
+act adv
+1996
+57
 V for Vendetta
 R
 act dra sci
@@ -188,6 +988,11 @@ R
 act dra his war
 2002
 65
+What We Do in the Shadows
+R
+com hor
+2014
+76
 Willy Wonka and the Chocolate Factory
 G
 fam fan mus
@@ -208,3 +1013,13 @@ R
 adv com hor
 2009
 73
+The Notebook
+PG-13
+dra rom
+2004
+53
+Easy A
+PG-13
+com dra rom
+2010
+72

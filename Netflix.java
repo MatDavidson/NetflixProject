@@ -24,7 +24,6 @@ public class Netflix {
 	CircularDoublyLinkedList<Movie> rom = new CircularDoublyLinkedList<Movie>("Romance");
 	CircularDoublyLinkedList<Movie> sci = new CircularDoublyLinkedList<Movie>("Science Fiction");
 	CircularDoublyLinkedList<Movie> spo = new CircularDoublyLinkedList<Movie>("Sports");
-	CircularDoublyLinkedList<Movie> sus = new CircularDoublyLinkedList<Movie>("Suspense");
 	CircularDoublyLinkedList<Movie> thr = new CircularDoublyLinkedList<Movie>("Thriller");
 	CircularDoublyLinkedList<Movie> war = new CircularDoublyLinkedList<Movie>("War");
 	CircularDoublyLinkedList<Movie> wes = new CircularDoublyLinkedList<Movie>("Western");
@@ -49,7 +48,6 @@ public class Netflix {
 		this.categories.addLast(rom);
 		this.categories.addLast(sci);
 		this.categories.addLast(spo);
-		this.categories.addLast(sus);
 		this.categories.addLast(thr);
 		this.categories.addLast(war);
 		this.categories.addLast(wes);
@@ -155,11 +153,7 @@ public class Netflix {
 			case "spo":
 				spo.addLast(m);
 				continue;
-				
-			case "sus":
-				sus.addLast(m);
-				continue;
-				
+
 			case "thr":
 				thr.addLast(m);
 				continue;
@@ -223,8 +217,15 @@ public class Netflix {
 		return result;
 	}
 	
-	public Movie searchAll(String s) {
+	public ArrayList<Movie> searchAll(String s) {
+		ArrayList<Movie> result = new ArrayList<Movie>();
 		
+		for(Movie m: all) {
+			if (m.getTitle().contains(s)) {
+				result.add(m);
+			}	
+		}
+		return result;
 	}
 	
 	@SuppressWarnings("rawtypes")

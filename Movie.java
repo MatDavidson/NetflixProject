@@ -45,7 +45,7 @@ public class Movie {
 	}
 	
 	public String toString() {
-		String s = "\t\t" + title + "\n\t\t" + rating + "\n\t\t" + genre + "\n\t\t" + year + "\n\t\t" + score;
+		String s = "" + title + " " + rating + " " + genre + " " + year + " " + score;
 		return s;
 	}
 }

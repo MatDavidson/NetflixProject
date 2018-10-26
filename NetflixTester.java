@@ -42,7 +42,7 @@ public class NetflixTester {
 		System.out.print(res3.display());
 		
 		System.out.print("\n\n********************************************");
-		for(Movie m: netflix.searchAll("a")) {
+		for(Movie m: netflix.searchAll("")) {
 			System.out.print("\n\t" + m.toString());
 		}
 	}

@@ -58,6 +58,8 @@ public class NetflixApp extends Application {
 		Button row3T5 = new Button("");
 
 	Tab tab2 = new Tab();
+		TextField tb1 = new TextField();
+		Label searchLabel = new Label("Search for movies");
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -290,7 +292,8 @@ public class NetflixApp extends Application {
 	
 	private Pane buildTab2Content() {
 		GridPane search = new GridPane();
-		
+		search.add(searchLabel, 0, 0);
+		search.add(tb1, 0,1);
 		return search;
 	}
 

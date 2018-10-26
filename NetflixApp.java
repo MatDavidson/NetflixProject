@@ -38,7 +38,7 @@ public class NetflixApp extends Application {
 		Button row1T3 = new Button("");
 		Button row1T4 = new Button("");
 		Button row1T5 = new Button("");
-	
+		
 		VBox row2 = new VBox();
 		Label r2Lbl = new Label("");
 		HBox row2List = new HBox();
@@ -63,7 +63,7 @@ public class NetflixApp extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			manager = buildGui();
-			Scene scene = new Scene(manager, 600, 500);
+			Scene scene = new Scene(manager, 614, 600);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Data-flix");
 			primaryStage.show();
@@ -121,12 +121,25 @@ public class NetflixApp extends Application {
 		BorderPane cat = new BorderPane();
 		
 		Button up = buildUp();
+		up.setMinHeight(35);//styling for height
+		up.setMaxWidth(Double.MAX_VALUE);//styling for width
 		cat.setTop(up);
+		
 		Button down = buildDown();
+		down.setMinHeight(35);//styling for height
+		down.setMaxWidth(Double.MAX_VALUE);//styling for width
 		cat.setBottom(down);
+		
 		Button left = buildLeft();
+		left.setMaxHeight(Double.MAX_VALUE);//styling for height
+		left.setMinWidth(56);
+		left.setMaxWidth(56);//styling for width
 		cat.setLeft(left);
+		
 		Button right = buildRight();
+		right.setMaxHeight(Double.MAX_VALUE);//styling for height
+		right.setMinWidth(56);
+		right.setMaxWidth(56);//styling for width
 		cat.setRight(right);
 		
 		VBox disp = buildDisp();
@@ -187,21 +200,31 @@ public class NetflixApp extends Application {
 		
 		Node<Movie> temp = currentMovie.getNext();
 		
+		row1T1.setMinWidth(100);
+		row1T1.setMaxWidth(100);
 		row1T1.setText(temp.getElement().getTitle());
 		list.getChildren().add(row1T1);
 		
+		row1T2.setMinWidth(100);
+		row1T2.setMaxWidth(100);
 		row1T2.setText(temp.getElement().getTitle());
 		list.getChildren().add(row1T2);
 		temp = temp.getNext();
 		
+		row1T3.setMinWidth(100);
+		row1T3.setMaxWidth(100);
 		row1T3.setText(temp.getElement().getTitle());
 		list.getChildren().add(row1T3);
 		temp = temp.getNext();
 		
+		row1T4.setMinWidth(100);
+		row1T4.setMaxWidth(100);
 		row1T4.setText(temp.getElement().getTitle());
 		list.getChildren().add(row1T4);
 		temp = temp.getNext();
 		
+		row1T5.setMinWidth(100);
+		row1T5.setMaxWidth(100);
 		row1T5.setText(temp.getElement().getTitle());
 		list.getChildren().add(row1T5);
 		
@@ -226,22 +249,32 @@ public class NetflixApp extends Application {
 		@SuppressWarnings("unchecked")
 		Node<Movie> temp = currentCat.getNext().getElement().getHead();
 		
+		row2T1.setMinWidth(100);
+		row2T1.setMaxWidth(100);
 		row2T1.setText(temp.getElement().getTitle());
 		list.getChildren().add(row2T1);
 		temp = temp.getNext();
 		
+		row2T2.setMinWidth(100);
+		row2T2.setMaxWidth(100);
 		row2T2.setText(temp.getElement().getTitle());
 		list.getChildren().add(row2T2);
 		temp = temp.getNext();
 		
+		row2T3.setMinWidth(100);
+		row2T3.setMaxWidth(100);
 		row2T3.setText(temp.getElement().getTitle());
 		list.getChildren().add(row2T3);
 		temp = temp.getNext();
 		
+		row2T4.setMinWidth(100);
+		row2T4.setMaxWidth(100);
 		row2T4.setText(temp.getElement().getTitle());
 		list.getChildren().add(row2T4);
 		temp = temp.getNext();
 		
+		row2T5.setMinWidth(100);
+		row2T5.setMaxWidth(100);
 		row2T5.setText(temp.getElement().getTitle());
 		list.getChildren().add(row2T5);
 		
@@ -266,22 +299,32 @@ public class NetflixApp extends Application {
 		@SuppressWarnings("unchecked")
 		Node<Movie> temp = currentCat.getNext().getNext().getElement().getHead();
 		
+		row3T1.setMinWidth(100);
+		row3T1.setMaxWidth(100);
 		row3T1.setText(temp.getElement().getTitle());
 		list.getChildren().add(row3T1);
 		temp = temp.getNext();
 		
+		row3T2.setMinWidth(100);
+		row3T2.setMaxWidth(100);
 		row3T2.setText(temp.getElement().getTitle());
 		list.getChildren().add(row3T2);
 		temp = temp.getNext();
 		
+		row3T3.setMinWidth(100);
+		row3T3.setMaxWidth(100);
 		row3T3.setText(temp.getElement().getTitle());
 		list.getChildren().add(row3T3);
 		temp = temp.getNext();
 		
+		row3T4.setMinWidth(100);
+		row3T4.setMaxWidth(100);
 		row3T4.setText(temp.getElement().getTitle());
 		list.getChildren().add(row3T4);
 		temp = temp.getNext();
 		
+		row3T5.setMinWidth(100);
+		row3T5.setMaxWidth(100);
 		row3T5.setText(temp.getElement().getTitle());
 		list.getChildren().add(row3T5);
 		

@@ -45,6 +45,8 @@ public class NetflixTester {
 		for(Movie m: netflix.searchAll("hon")) {
 			System.out.print("\n\t" + m.toString());
 		}
+		
+		System.out.print(netflix.mus.display());
 	}
 
 }

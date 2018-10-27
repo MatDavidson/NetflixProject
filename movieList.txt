@@ -228,7 +228,7 @@ R
 adv com dra
 1999
 62
-Dude, Where’s My Car?
+Dude, Where's My Car?
 PG-13
 com mys sci
 2000
@@ -493,6 +493,11 @@ R
 com spo
 1989
 62
+Mama Mia!
+PG-13
+com mus rom
+2008
+51
 Men in Black
 PG-13
 adv com mys sci
@@ -588,6 +593,11 @@ PG
 bio dra spo
 2000
 48
+Rent
+PG-13
+dra mus rom
+2005
+53
 Running Scared
 R
 act cri dra

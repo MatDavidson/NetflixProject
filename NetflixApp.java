@@ -87,8 +87,8 @@ public class NetflixApp extends Application {
 	Button searchButton = new Button("Search");
 	TextArea ta1 = new TextArea();
 	Label resultLabel = new Label("Results");
-	double resultWidth = 400;
-	double resultHeight = 400;	
+	double resultWidth = 300;
+	double resultHeight = 150;	
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -396,12 +396,14 @@ public class NetflixApp extends Application {
 		search.add(searchLabel, 4, 0);
 		search.add(tb1, 4,1);
 		searchEventHandler seh1 = new searchEventHandler();
+		searchButton.setStyle("-fx-base: red");
 		searchButton.setOnAction(seh1);
 		search.add(searchButton, 4,3);
 		search.add(resultLabel, 4, 5);
 		search.add(ta1, 4, 7);
 		searchButton.setDefaultButton(true);
 		ta1.setPrefWidth(resultWidth);
+		ta1.setPrefHeight(resultHeight);
 		ta1.setEditable(false);
 		return search;
 	}

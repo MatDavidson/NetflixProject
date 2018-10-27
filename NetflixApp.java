@@ -1,6 +1,10 @@
 package Netflix;
 
+import java.util.ArrayList;
+
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -58,6 +62,13 @@ public class NetflixApp extends Application {
 		Button row3T5 = new Button("");
 
 	Tab tab2 = new Tab();
+	TextField tb1 = new TextField();
+	Label searchLabel = new Label("Search for movies");
+	Button searchButton = new Button("Search");
+	TextArea ta1 = new TextArea();
+	Label resultLabel = new Label("Results");
+	double resultWidth = 400;
+	double resultHeight = 400;	
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -333,8 +344,41 @@ public class NetflixApp extends Application {
 	
 	private Pane buildTab2Content() {
 		GridPane search = new GridPane();
-		
+		search.setVgap(5);
+		search.add(searchLabel, 0, 0);
+		search.add(tb1, 0,1);
+		searchEventHandler seh1 = new searchEventHandler();
+		searchButton.setOnAction(seh1);
+		search.add(searchButton, 0,3);
+		search.add(resultLabel, 4, 3);
+		search.add(ta1, 4, 6);
+		ta1.setPrefWidth(resultWidth);
 		return search;
+	}
+	private class searchEventHandler implements EventHandler<ActionEvent>{
+		
+		public void handle(ActionEvent e) {
+			ta1.clear();
+			ArrayList<Movie> results = new ArrayList<Movie>();
+			if (tb1.getText().equals("")) {
+				ta1.appendText("No movie input. \n");
+				tb1.clear();
+			}
+			else {
+				String movieSearch = tb1.getText();
+				results = netflix.searchAll(movieSearch);
+				for (Movie m: results) {
+					String title = m.getTitle();
+					String rating = m.getRating();
+					String genre = m.getGenre();
+					int year = m.getYear();
+					int score = m.getScore();
+					
+					ta1.appendText(title + " " + rating + " " + genre + " " +  year + " " + score + "\n");
+				}
+				tb1.clear();
+			}
+		}
 	}
 
 	public static void main(String[] args) {

@@ -711,6 +711,7 @@ public class NetflixApp extends Application {
 			row1T5.setText(temp.getElement().getTitle());
 		}
 	}
+	
 	private class rightEventHandler implements EventHandler<ActionEvent>{
 		public void handle (ActionEvent e) {
 			currentMovie = currentMovie.getNext();

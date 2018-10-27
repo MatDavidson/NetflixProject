@@ -345,16 +345,19 @@ public class NetflixApp extends Application {
 	private Pane buildTab2Content() {
 		GridPane search = new GridPane();
 		search.setVgap(5);
-		search.add(searchLabel, 0, 0);
-		search.add(tb1, 0,1);
+		search.add(searchLabel, 4, 0);
+		search.add(tb1, 4,1);
 		searchEventHandler seh1 = new searchEventHandler();
 		searchButton.setOnAction(seh1);
-		search.add(searchButton, 0,3);
-		search.add(resultLabel, 4, 3);
-		search.add(ta1, 4, 6);
+		search.add(searchButton, 4,3);
+		search.add(resultLabel, 4, 5);
+		search.add(ta1, 4, 7);
+		searchButton.setDefaultButton(true);
 		ta1.setPrefWidth(resultWidth);
+		ta1.setEditable(false);
 		return search;
 	}
+	//Event handler for search button
 	private class searchEventHandler implements EventHandler<ActionEvent>{
 		
 		public void handle(ActionEvent e) {

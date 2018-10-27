@@ -161,21 +161,29 @@ public class NetflixApp extends Application {
 	
 	private Button buildUp() {
 		Button up = new Button("Up");
+		upEventHandler up1 = new upEventHandler();
+		up.setOnAction(up1);
 		return up;
 	}
 
 	private Button buildDown() {
 		Button down = new Button("Down");
+		downEventHandler down1 = new downEventHandler();
+		down.setOnAction(down1);
 		return down;
 	}
 
 	private Button buildLeft() {
 		Button left = new Button("Left");
+		leftEventHandler left1 = new leftEventHandler();
+		left.setOnAction(left1);
 		return left;
 	}
 
 	private Button buildRight() {
 		Button right = new Button("Right");
+		rightEventHandler right1 = new rightEventHandler();
+		right.setOnAction(right1);
 		return right;
 	}
 	
@@ -361,7 +369,9 @@ public class NetflixApp extends Application {
 	private class searchEventHandler implements EventHandler<ActionEvent>{
 		
 		public void handle(ActionEvent e) {
-			ta1.clear();
+			if (ta1.getText() != "") {
+				ta1.clear();
+			}
 			ArrayList<Movie> results = new ArrayList<Movie>();
 			if (tb1.getText().equals("")) {
 				ta1.appendText("No movie input. \n");
@@ -386,6 +396,27 @@ public class NetflixApp extends Application {
 				}
 				tb1.clear();
 			}
+		}
+	}
+	private class upEventHandler implements EventHandler<ActionEvent>{
+		public void handle (ActionEvent e) {
+		}
+	}
+	
+	private class downEventHandler implements EventHandler<ActionEvent>{
+		public void handle (ActionEvent e) {
+			
+		}
+	}
+	
+	private class leftEventHandler implements EventHandler<ActionEvent>{
+		public void handle (ActionEvent e) {
+			
+		}
+	}
+	private class rightEventHandler implements EventHandler<ActionEvent>{
+		public void handle (ActionEvent e) {
+			
 		}
 	}
 

@@ -181,6 +181,7 @@ public class NetflixApp extends Application {
 	
 	private Button buildUp() {
 		Button up = new Button("Up");
+		up.setStyle("-fx-base: black");
 		upEventHandler up1 = new upEventHandler();
 		up.setOnAction(up1);
 		return up;
@@ -188,6 +189,7 @@ public class NetflixApp extends Application {
 
 	private Button buildDown() {
 		Button down = new Button("Down");
+		down.setStyle("-fx-base: black");
 		downEventHandler down1 = new downEventHandler();
 		down.setOnAction(down1);
 		return down;
@@ -195,6 +197,7 @@ public class NetflixApp extends Application {
 
 	private Button buildLeft() {
 		Button left = new Button("Left");
+		left.setStyle("-fx-base: black");
 		leftEventHandler left1 = new leftEventHandler();
 		left.setOnAction(left1);
 		return left;
@@ -202,6 +205,7 @@ public class NetflixApp extends Application {
 
 	private Button buildRight() {
 		Button right = new Button("Right");
+		right.setStyle("-fx-base: black");
 		rightEventHandler right1 = new rightEventHandler();
 		right.setOnAction(right1);
 		return right;
@@ -239,29 +243,35 @@ public class NetflixApp extends Application {
 		
 		Node<Movie> temp = currentMovie.getNext();
 		
+		//for changing color of button
+		row1T1.setStyle("-fx-base: red");
 		row1T1.setMinWidth(100);
 		row1T1.setMaxWidth(100);
 		row1T1.setText(currentMovie.getElement().getTitle());
 		list.getChildren().add(row1T1);
 		
+		row1T2.setStyle("-fx-base: red");
 		row1T2.setMinWidth(100);
 		row1T2.setMaxWidth(100);
 		row1T2.setText(temp.getElement().getTitle());
 		list.getChildren().add(row1T2);
 		temp = temp.getNext();
 		
+		row1T3.setStyle("-fx-base: red");
 		row1T3.setMinWidth(100);
 		row1T3.setMaxWidth(100);
 		row1T3.setText(temp.getElement().getTitle());
 		list.getChildren().add(row1T3);
 		temp = temp.getNext();
 		
+		row1T4.setStyle("-fx-base: red");
 		row1T4.setMinWidth(100);
 		row1T4.setMaxWidth(100);
 		row1T4.setText(temp.getElement().getTitle());
 		list.getChildren().add(row1T4);
 		temp = temp.getNext();
 		
+		row1T5.setStyle("-fx-base: red");
 		row1T5.setMinWidth(100);
 		row1T5.setMaxWidth(100);
 		row1T5.setText(temp.getElement().getTitle());
@@ -288,30 +298,35 @@ public class NetflixApp extends Application {
 		@SuppressWarnings("unchecked")
 		Node<Movie> temp = currentCat.getNext().getElement().getHead();
 		
+		row2T1.setStyle("-fx-base: red");
 		row2T1.setMinWidth(100);
 		row2T1.setMaxWidth(100);
 		row2T1.setText(temp.getElement().getTitle());
 		list.getChildren().add(row2T1);
 		temp = temp.getNext();
 		
+		row2T2.setStyle("-fx-base: red");
 		row2T2.setMinWidth(100);
 		row2T2.setMaxWidth(100);
 		row2T2.setText(temp.getElement().getTitle());
 		list.getChildren().add(row2T2);
 		temp = temp.getNext();
 		
+		row2T3.setStyle("-fx-base: red");
 		row2T3.setMinWidth(100);
 		row2T3.setMaxWidth(100);
 		row2T3.setText(temp.getElement().getTitle());
 		list.getChildren().add(row2T3);
 		temp = temp.getNext();
 		
+		row2T4.setStyle("-fx-base: red");
 		row2T4.setMinWidth(100);
 		row2T4.setMaxWidth(100);
 		row2T4.setText(temp.getElement().getTitle());
 		list.getChildren().add(row2T4);
 		temp = temp.getNext();
 		
+		row2T5.setStyle("-fx-base: red");
 		row2T5.setMinWidth(100);
 		row2T5.setMaxWidth(100);
 		row2T5.setText(temp.getElement().getTitle());
@@ -338,30 +353,35 @@ public class NetflixApp extends Application {
 		@SuppressWarnings("unchecked")
 		Node<Movie> temp = currentCat.getNext().getNext().getElement().getHead();
 		
+		row3T1.setStyle("-fx-base: red");
 		row3T1.setMinWidth(100);
 		row3T1.setMaxWidth(100);
 		row3T1.setText(temp.getElement().getTitle());
 		list.getChildren().add(row3T1);
 		temp = temp.getNext();
 		
+		row3T2.setStyle("-fx-base: red");
 		row3T2.setMinWidth(100);
 		row3T2.setMaxWidth(100);
 		row3T2.setText(temp.getElement().getTitle());
 		list.getChildren().add(row3T2);
 		temp = temp.getNext();
 		
+		row3T3.setStyle("-fx-base: red");
 		row3T3.setMinWidth(100);
 		row3T3.setMaxWidth(100);
 		row3T3.setText(temp.getElement().getTitle());
 		list.getChildren().add(row3T3);
 		temp = temp.getNext();
 		
+		row3T4.setStyle("-fx-base: red");
 		row3T4.setMinWidth(100);
 		row3T4.setMaxWidth(100);
 		row3T4.setText(temp.getElement().getTitle());
 		list.getChildren().add(row3T4);
 		temp = temp.getNext();
 		
+		row3T5.setStyle("-fx-base: red");
 		row3T5.setMinWidth(100);
 		row3T5.setMaxWidth(100);
 		row3T5.setText(temp.getElement().getTitle());

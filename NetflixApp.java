@@ -391,75 +391,57 @@ public class NetflixApp extends Application {
 		case "Action":
 			actLast = currentMovie;
 			break;
-
 		case "Adventure":
 			advLast = currentMovie;
 			break;
-
 		case "Animation":
 			aniLast = currentMovie;
 			break;
-
 		case "Biography":
 			bioLast = currentMovie;
 			break;
-
 		case "Comedy":
 			comLast = currentMovie;
 			break;
-
 		case "Crime":
 			criLast = currentMovie;
 			break;
-
 		case "Drama":
 			draLast = currentMovie;
 			break;
-
 		case "Family":
 			famLast = currentMovie;
 			break;
-
 		case "Fantasy":
 			fanLast = currentMovie;
 			break;
-
 		case "History":
 			hisLast = currentMovie;
 			break;
-
 		case "Horror":
 			horLast = currentMovie;
 			break;
-
-		case "Musical":
+		case "Music":
 			musLast = currentMovie;
 			break;
-
 		case "Mystery":
 			mysLast = currentMovie;
 			break;
-
 		case "Romance":
 			romLast = currentMovie;
 			break;
-
 		case "Science Fiction":
 			sciLast = currentMovie;
 			break;
-
 		case "Sports":
 			spoLast = currentMovie;
 			break;
-
 		case "Thriller":
 			thrLast = currentMovie;
 			break;
-
 		case "War":
 			warLast = currentMovie;
 			break;
-
 		case "Western":
 			wesLast = currentMovie;
 			break;
@@ -471,81 +453,108 @@ public class NetflixApp extends Application {
 		case "Action":
 			currentMovie = actLast;
 			break;
-
 		case "Adventure":
 			currentMovie = advLast;
 			break;
-
 		case "Animation":
 			currentMovie = aniLast;
 			break;
-
 		case "Biography":
 			currentMovie = bioLast;
 			break;
-
 		case "Comedy":
 			currentMovie = comLast;
 			break;
-
 		case "Crime":
 			currentMovie = criLast;
 			break;
-
 		case "Drama":
 			currentMovie = draLast;
 			break;
-
 		case "Family":
 			currentMovie = famLast;
 			break;
-
 		case "Fantasy":
 			currentMovie = fanLast;
 			break;
-
 		case "History":
 			currentMovie = hisLast;
 			break;
-
 		case "Horror":
 			currentMovie = horLast;
 			break;
-
-		case "Musical":
+		case "Music":
 			currentMovie = musLast;
 			break;
-
 		case "Mystery":
 			currentMovie = mysLast;
 			break;
-
 		case "Romance":
 			currentMovie = romLast;
 			break;
-
 		case "Science Fiction":
 			currentMovie = sciLast;
 			break;
-
 		case "Sports":
 			currentMovie = spoLast;
 			break;
-
 		case "Thriller":
 			currentMovie = thrLast;
 			break;
-
 		case "War":
 			currentMovie = warLast;
 			break;
-
 		case "Western":
 			currentMovie = wesLast;
 			break;
 		}
 	}
+	
 
+	public Node<Movie> getLastMov(CircularDoublyLinkedList<Movie> cat){
+		switch (cat.getName()) {
+		case "Action":
+			return actLast;
+		case "Adventure":
+			return advLast;
+		case "Animation":
+			return aniLast;
+		case "Biography":
+			return bioLast;
+		case "Comedy":
+			return comLast;
+		case "Crime":
+			return criLast;
+		case "Drama":
+			return draLast;
+		case "Family":
+			return famLast;		
+		case "Fantasy":
+			return fanLast;
+		case "History":
+			return hisLast;
+		case "Horror":
+			return horLast;
+		case "Music":
+			return musLast;
+		case "Mystery":
+			return mysLast;
+		case "Romance":
+			return romLast;
+		case "Science Fiction":
+			return sciLast;
+		case "Sports":
+			return spoLast;
+		case "Thriller":
+			return thrLast;
+		case "War":
+			return warLast;
+		case "Western":
+			return wesLast;
+		default:
+			return currentMovie;
+		}
+	}
 	
 	
 	//Event handler for search button
@@ -582,16 +591,59 @@ public class NetflixApp extends Application {
 	}
 	
 	private class upEventHandler implements EventHandler<ActionEvent>{
+		@SuppressWarnings("unchecked")
 		public void handle (ActionEvent e) {
 			setLastMov();
 			
 			currentCat = currentCat.getPrev();
 			
 			setCurMov();
+			
+			r1Lbl.setText(currentCat.getElement().getName());
+			infoLbl.setText(currentMovie.getElement().toString());
+			Node<Movie> temp = currentMovie.getNext();
+			row1T1.setText(currentMovie.getElement().getTitle());
+			row1T2.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row1T3.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row1T4.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row1T5.setText(temp.getElement().getTitle());
+			
+			@SuppressWarnings("rawtypes")
+			Node<CircularDoublyLinkedList> tempCat = currentCat.getNext();
+			temp = getLastMov(tempCat.getElement());
+			
+			r2Lbl.setText(tempCat.getElement().getName());
+			row2T1.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row2T2.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row2T3.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row2T4.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row2T5.setText(temp.getElement().getTitle());
+			
+			tempCat = tempCat.getNext();
+			temp = getLastMov(tempCat.getElement());
+			
+			r3Lbl.setText(tempCat.getElement().getName());
+			row3T1.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row3T2.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row3T3.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row3T4.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row3T5.setText(temp.getElement().getTitle());
 		}
 	}
 	
 	private class downEventHandler implements EventHandler<ActionEvent>{
+		@SuppressWarnings("unchecked")
 		public void handle (ActionEvent e) {
 			setLastMov();
 			
@@ -611,7 +663,35 @@ public class NetflixApp extends Application {
 			temp = temp.getNext();
 			row1T5.setText(temp.getElement().getTitle());
 			
+			@SuppressWarnings("rawtypes")
+			Node<CircularDoublyLinkedList> tempCat = currentCat.getNext();
+			temp = getLastMov(tempCat.getElement());
 			
+			r2Lbl.setText(tempCat.getElement().getName());
+			row2T1.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row2T2.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row2T3.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row2T4.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row2T5.setText(temp.getElement().getTitle());
+			
+			tempCat = tempCat.getNext();
+			temp = getLastMov(tempCat.getElement());
+			
+			r3Lbl.setText(tempCat.getElement().getName());
+			row3T1.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row3T2.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row3T3.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row3T4.setText(temp.getElement().getTitle());
+			temp = temp.getNext();
+			row3T5.setText(temp.getElement().getTitle());
+
 		}
 	}
 	

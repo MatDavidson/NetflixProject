@@ -367,14 +367,19 @@ public class NetflixApp extends Application {
 			else {
 				String movieSearch = tb1.getText();
 				results = netflix.searchAll(movieSearch);
-				for (Movie m: results) {
-					String title = m.getTitle();
-					String rating = m.getRating();
-					String genre = m.getGenre();
-					int year = m.getYear();
-					int score = m.getScore();
-					
-					ta1.appendText(title + " " + rating + " " + genre + " " +  year + " " + score + "\n");
+				if (results.isEmpty() == true){
+					ta1.appendText("Movie not found");
+				}
+				else {
+					for (Movie m: results) {
+						String title = m.getTitle();
+						String rating = m.getRating();
+						String genre = m.getGenre();
+						int year = m.getYear();
+						int score = m.getScore();
+						
+						ta1.appendText(title + " " + rating + " " + genre + " " +  year + " " + score + "\n");
+					}
 				}
 				tb1.clear();
 			}

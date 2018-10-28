@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -82,13 +83,32 @@ public class NetflixApp extends Application {
 		Button row3T5 = new Button("");
 
 	Tab tab2 = new Tab();
-	TextField tb1 = new TextField();
-	Label searchLabel = new Label("Search for movies");
-	Button searchButton = new Button("Search");
-	TextArea ta1 = new TextArea();
-	Label resultLabel = new Label("Results");
-	double resultWidth = 300;
-	double resultHeight = 150;	
+		TextField tb1 = new TextField();
+		Label searchLabel = new Label("Search for movies");
+		Button searchButton = new Button("Search");
+		TextArea ta1 = new TextArea();
+		Label resultLabel = new Label("Results");
+		double resultWidth = 600;
+		double resultHeight = 200;
+		CheckBox cbAction = new CheckBox("Action");
+		CheckBox cbAdventure = new CheckBox("Adventure");
+		CheckBox cbAnimation = new CheckBox("Animation");
+		CheckBox cbBiography = new CheckBox("Biography");
+		CheckBox cbComedy = new CheckBox("Comedy");
+		CheckBox cbCrime = new CheckBox("Crime");
+		CheckBox cbDrama = new CheckBox("Drama");
+		CheckBox cbFamily = new CheckBox("Family");
+		CheckBox cbFantasy = new CheckBox("Fantasy");
+		CheckBox cbHistory = new CheckBox("History");
+		CheckBox cbHorror = new CheckBox("Horror");
+		CheckBox cbMusic = new CheckBox("Music");
+		CheckBox cbMystery = new CheckBox("Mystery");
+		CheckBox cbRomance = new CheckBox("Romance");
+		CheckBox cbSciFi = new CheckBox("Science Fiction");
+		CheckBox cbSports = new CheckBox("Sports");
+		CheckBox cbThriller = new CheckBox("Thriller");
+		CheckBox cbWar = new CheckBox("War");
+		CheckBox cbWestern = new CheckBox("Western");
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -400,11 +420,41 @@ public class NetflixApp extends Application {
 		searchButton.setOnAction(seh1);
 		search.add(searchButton, 4,3);
 		search.add(resultLabel, 4, 5);
-		search.add(ta1, 4, 7);
+		search.add(ta1, 4, 6);
+		
+//		Creating a GridPane to add the checkboxes to, then adding that to the Tab's GridPane
+		Label cbLabel = new Label("Select different genres to see all movies of those genres.");
+		GridPane cbGridPane = new GridPane();
+		cbGridPane.add(cbAction, 0, 0);
+		cbGridPane.add(cbAdventure, 1, 0);
+		cbGridPane.add(cbAnimation, 2, 0);
+		cbGridPane.add(cbBiography, 0, 1);
+		cbGridPane.add(cbComedy, 1, 1);
+		cbGridPane.add(cbCrime, 2, 1);
+		cbGridPane.add(cbDrama, 0, 2);
+		cbGridPane.add(cbFamily, 1, 2);
+		cbGridPane.add(cbFantasy, 2, 2);
+		cbGridPane.add(cbHistory, 0, 3);
+		cbGridPane.add(cbHorror, 1, 3);
+		cbGridPane.add(cbMusic, 2, 3);
+		cbGridPane.add(cbMystery, 0, 4);
+		cbGridPane.add(cbRomance, 1, 4);
+		cbGridPane.add(cbSciFi, 2, 4);
+		cbGridPane.add(cbSports, 0, 5);
+		cbGridPane.add(cbThriller, 1, 5);
+		cbGridPane.add(cbWar, 2, 5);
+		cbGridPane.add(cbWestern, 0, 6);
+		cbGridPane.setVgap(15);
+		cbGridPane.setHgap(15);
+		search.add(cbLabel, 4, 8);
+		search.add(cbGridPane, 4, 9);
+		
 		searchButton.setDefaultButton(true);
 		ta1.setPrefWidth(resultWidth);
 		ta1.setPrefHeight(resultHeight);
 		ta1.setEditable(false);
+		
+		
 		return search;
 	}
 	

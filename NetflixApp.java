@@ -122,7 +122,7 @@ public class NetflixApp extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			manager = buildGui();
-			Scene scene = new Scene(manager, 614, 400);
+			Scene scene = new Scene(manager, 614, 435);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Data-flix");
 			primaryStage.show();

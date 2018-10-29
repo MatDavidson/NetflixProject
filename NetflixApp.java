@@ -1,18 +1,21 @@
 package Netflix;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -82,19 +85,44 @@ public class NetflixApp extends Application {
 		Button row3T5 = new Button("");
 
 	Tab tab2 = new Tab();
-	TextField tb1 = new TextField();
-	Label searchLabel = new Label("Search for movies");
-	Button searchButton = new Button("Search");
-	TextArea ta1 = new TextArea();
-	Label resultLabel = new Label("Results");
-	double resultWidth = 300;
-	double resultHeight = 150;	
+		TextField tb1 = new TextField();
+		Label searchLabel = new Label("Search for movies");
+		Button searchButton = new Button("Search");
+		TextArea ta1 = new TextArea();
+		Label resultLabel = new Label("Results");
+		double resultWidth = 500;
+		double resultHeight = 150;	
+		
+		Button commonButton = new Button("Go");
+		CheckBox actBox = new CheckBox("Action         ");
+		CheckBox advBox = new CheckBox("Adventure      ");
+		CheckBox aniBox = new CheckBox("Animation      ");
+		CheckBox bioBox = new CheckBox("Biography      ");
+		CheckBox comBox = new CheckBox("Comedy         ");
+		CheckBox criBox = new CheckBox("Crime          ");
+		CheckBox draBox = new CheckBox("Drama          ");
+		CheckBox famBox = new CheckBox("Family         ");
+		CheckBox fanBox = new CheckBox("Fantasy        ");
+		CheckBox hisBox = new CheckBox("History        ");
+		CheckBox horBox = new CheckBox("Horror         ");
+		CheckBox musBox = new CheckBox("Music          ");
+		CheckBox mysBox = new CheckBox("Mystery        ");
+		CheckBox romBox = new CheckBox("Romance        ");
+		CheckBox sciBox = new CheckBox("Science Fiction");
+		CheckBox spoBox = new CheckBox("Sports         ");
+		CheckBox thrBox = new CheckBox("Thriller       ");
+		CheckBox warBox = new CheckBox("War            ");
+		CheckBox wesBox = new CheckBox("Western        ");
+		
+		List<CheckBox> boxes = new ArrayList<CheckBox>();
+		
+		
 	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			manager = buildGui();
-			Scene scene = new Scene(manager, 614, 600);
+			Scene scene = new Scene(manager, 614, 400);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Data-flix");
 			primaryStage.show();
@@ -405,9 +433,43 @@ public class NetflixApp extends Application {
 		ta1.setPrefWidth(resultWidth);
 		ta1.setPrefHeight(resultHeight);
 		ta1.setEditable(false);
+		
+		Label commonLbl = new Label("Movies in common");
+		search.add(commonLbl, 6, 0);
+		FlowPane common = buildCommon();
+		search.add(common, 6, 1);
+		search.add(commonButton, 6, 3);
+		commonButton.setStyle("-fx-base: red");
+		commonButton.setOnAction(new commonEventHandler());
 		return search;
 	}
 	
+	private FlowPane buildCommon() {
+		FlowPane common = new FlowPane();
+				
+		common.getChildren().add(actBox);
+		common.getChildren().add(advBox);
+		common.getChildren().add(aniBox);
+		common.getChildren().add(bioBox);
+		common.getChildren().add(comBox);
+		common.getChildren().add(criBox);
+		common.getChildren().add(draBox);
+		common.getChildren().add(famBox);
+		common.getChildren().add(fanBox);
+		common.getChildren().add(hisBox);
+		common.getChildren().add(horBox);
+		common.getChildren().add(musBox);
+		common.getChildren().add(mysBox);
+		common.getChildren().add(romBox);
+		common.getChildren().add(sciBox);
+		common.getChildren().add(spoBox);
+		common.getChildren().add(thrBox);
+		common.getChildren().add(warBox);
+		common.getChildren().add(wesBox);
+		
+		return common;
+	}
+		
 	public void setLastMov() {
 		switch (currentCat.getElement().getName()) {
 		case "Action":
@@ -532,7 +594,6 @@ public class NetflixApp extends Application {
 		}
 	}
 	
-
 	public Node<Movie> getLastMov(CircularDoublyLinkedList<Movie> cat){
 		switch (cat.getName()) {
 		case "Action":
@@ -577,8 +638,7 @@ public class NetflixApp extends Application {
 			return currentMovie;
 		}
 	}
-	
-	
+		
 	//Event handler for search button
 	private class searchEventHandler implements EventHandler<ActionEvent>{	
 		public void handle(ActionEvent e) {
@@ -611,6 +671,95 @@ public class NetflixApp extends Application {
 			}
 		}
 	}
+
+	private class commonEventHandler implements EventHandler<ActionEvent>{
+		@SuppressWarnings("unchecked")
+		public void handle(ActionEvent e) {
+			ta1.clear();
+			@SuppressWarnings("rawtypes")
+			ArrayList<CircularDoublyLinkedList> lists = new ArrayList<CircularDoublyLinkedList>();
+			String mov = new String("");
+
+			if(actBox.isSelected())
+				lists.add(netflix.act);
+			if(advBox.isSelected())
+				lists.add(netflix.adv);
+			if(aniBox.isSelected())
+				lists.add(netflix.ani);
+			if(bioBox.isSelected())
+				lists.add(netflix.bio);
+			if(comBox.isSelected())
+				lists.add(netflix.com);
+			if(criBox.isSelected())
+				lists.add(netflix.cri);
+			if(draBox.isSelected())
+				lists.add(netflix.dra);
+			if(famBox.isSelected())
+				lists.add(netflix.fam);
+			if(fanBox.isSelected())
+				lists.add(netflix.fan);
+			if(hisBox.isSelected())
+				lists.add(netflix.his);
+			if(musBox.isSelected())
+				lists.add(netflix.mus);
+			if(mysBox.isSelected())
+				lists.add(netflix.mys);
+			if(romBox.isSelected())
+				lists.add(netflix.rom);
+			if(sciBox.isSelected())
+				lists.add(netflix.sci);
+			if(spoBox.isSelected())
+				lists.add(netflix.spo);
+			if(thrBox.isSelected())
+				lists.add(netflix.thr);
+			if(warBox.isSelected())
+				lists.add(netflix.war);
+			if(wesBox.isSelected())
+				lists.add(netflix.wes);
+			if(horBox.isSelected())
+				lists.add(netflix.hor);					
+
+			if(lists.size() == 1){
+				CircularDoublyLinkedList<Movie> result = lists.get(0);
+				Node<Movie> m = result.getHead();
+				for(int i = 0; i < result.getSize();i++) {
+					mov = m.getElement().getTitle() + " " + m.getElement().getRating() + " " + m.getElement().getGenre() + " " +  m.getElement().getYear() + " " + m.getElement().getScore() + "\n";
+					ta1.appendText(mov);
+					m = m.getNext();
+				}
+			}
+
+			if(lists.size() == 2) {
+				CircularDoublyLinkedList<Movie> result = netflix.commonMovies(lists.get(0), lists.get(1));
+				
+				if(result.getSize() == 0)
+					ta1.appendText("No common Movies");
+				
+				Node<Movie> m = result.getHead();
+				for(int i = 0; i < result.getSize();i++) {
+					mov = m.getElement().getTitle() + " " + m.getElement().getRating() + " " + m.getElement().getGenre() + " " +  m.getElement().getYear() + " " + m.getElement().getScore() + "\n";
+					ta1.appendText(mov);
+					m = m.getNext();
+				}
+			}
+			if(lists.size() > 2) {
+				CircularDoublyLinkedList<Movie> result = netflix.commonMovies(lists.get(0), lists.get(1));
+				
+				for(int i = 2; i < lists.size(); i++) {
+					result = netflix.commonMovies(result, lists.get(i));
+				}
+				if(result.getSize() == 0)
+					ta1.appendText("No common Movies");
+				
+				Node<Movie> m = result.getHead();
+				for(int i = 0; i < result.getSize();i++) {
+					mov = m.getElement().getTitle() + " " + m.getElement().getRating() + " " + m.getElement().getGenre() + " " +  m.getElement().getYear() + " " + m.getElement().getScore() + "\n";
+					ta1.appendText(mov);
+					m = m.getNext();
+				}
+			}
+		}
+	}		
 	
 	private class upEventHandler implements EventHandler<ActionEvent>{
 		@SuppressWarnings("unchecked")

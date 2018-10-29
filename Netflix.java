@@ -199,7 +199,7 @@ public class Netflix {
 				//Compare the titles of the movies
 				if(t1.compareTo(t2) == 0) { 				//Match case
 					result.addLast(list1Ptr.getElement());	//Add the movie to the result list
-					l2SCount += addCount;					//Add the value of addCount to l2Start to keep up with our place
+					l2SCount += addCount-1;					//Add the value of addCount to l2Start to keep up with our place
 					list2Start = list2Ptr;					//Update our list2 placeholder
 					addCount = 0;							//Reset addCount
 					break;									//Exit the inner loop
@@ -209,7 +209,8 @@ public class Netflix {
 					list2Ptr = list2Ptr.getNext();			//Move to the next movie in list2
 					t2 = list2Ptr.getElement().getTitle();	//Update t2
 				}
-				else {										//Once the value of t1 becomes greater than t2 (alphabetically), exit the loop
+				else {	//Once the value of t1 becomes greater than t2 (alphabetically), exit the loop
+					addCount = 0;
 					break;
 				}
 			}

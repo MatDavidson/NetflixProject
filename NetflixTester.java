@@ -47,6 +47,9 @@ public class NetflixTester {
 		}
 		
 		System.out.print(netflix.mus.display());
+		
+		CircularDoublyLinkedList<Movie> res4 = netflix.commonMovies(netflix.com, netflix.spo);
+		System.out.print(res4.display());
 	}
 
 }

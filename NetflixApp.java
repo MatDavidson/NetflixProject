@@ -20,6 +20,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class NetflixApp extends Application {
@@ -122,6 +123,7 @@ public class NetflixApp extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			manager = buildGui();
+			manager.setStyle("-fx-background-color: black");
 			Scene scene = new Scene(manager, 614, 435);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Data-flix");
@@ -142,13 +144,16 @@ public class NetflixApp extends Application {
 		
 		tab1.setText("Home");
 		tab1.setContent(buildTab1Content());
+		tab1.setStyle("-fx-base: red");
 		
 		tab2.setText("Search");
 		tab2.setContent(buildTab2Content());
+		tab2.setStyle("-fx-base: red");
 		
 		tab.getTabs().addAll(tab1, tab2);
 		
 		brdPane.setCenter(tab);
+		
 		return brdPane;
 	}
 	
@@ -173,6 +178,7 @@ public class NetflixApp extends Application {
 		
 		infoLbl.setText(currentMovie.getElement().toString());
 		info.getChildren().add(infoLbl);
+		info.setStyle("-fx-base: black");
 		return info;
 	}
 	
@@ -209,7 +215,7 @@ public class NetflixApp extends Application {
 	
 	private Button buildUp() {
 		Button up = new Button("Up");
-		up.setStyle("-fx-base: black");
+		up.setStyle("-fx-base: red");
 		upEventHandler up1 = new upEventHandler();
 		up.setOnAction(up1);
 		return up;
@@ -217,7 +223,7 @@ public class NetflixApp extends Application {
 
 	private Button buildDown() {
 		Button down = new Button("Down");
-		down.setStyle("-fx-base: black");
+		down.setStyle("-fx-base: red");
 		downEventHandler down1 = new downEventHandler();
 		down.setOnAction(down1);
 		return down;
@@ -225,7 +231,7 @@ public class NetflixApp extends Application {
 
 	private Button buildLeft() {
 		Button left = new Button("Left");
-		left.setStyle("-fx-base: black");
+		left.setStyle("-fx-base: red");
 		leftEventHandler left1 = new leftEventHandler();
 		left.setOnAction(left1);
 		return left;
@@ -233,7 +239,7 @@ public class NetflixApp extends Application {
 
 	private Button buildRight() {
 		Button right = new Button("Right");
-		right.setStyle("-fx-base: black");
+		right.setStyle("-fx-base: red");
 		rightEventHandler right1 = new rightEventHandler();
 		right.setOnAction(right1);
 		return right;
@@ -270,6 +276,9 @@ public class NetflixApp extends Application {
 		HBox list = new HBox();
 		
 		Node<Movie> temp = currentMovie.getNext();
+		
+		//changing label background color
+		r1Lbl.setStyle("-fx-base: black");
 		
 		//for changing color of button
 		row1T1.setStyle("-fx-base: red");
@@ -326,6 +335,9 @@ public class NetflixApp extends Application {
 		@SuppressWarnings("unchecked")
 		Node<Movie> temp = currentCat.getNext().getElement().getHead();
 		
+		//changing label background color
+		r2Lbl.setStyle("-fx-base: black");
+		
 		row2T1.setStyle("-fx-base: red");
 		row2T1.setMinWidth(100);
 		row2T1.setMaxWidth(100);
@@ -381,6 +393,9 @@ public class NetflixApp extends Application {
 		@SuppressWarnings("unchecked")
 		Node<Movie> temp = currentCat.getNext().getNext().getElement().getHead();
 		
+		//changing label background color
+		r3Lbl.setStyle("-fx-base: black");
+		
 		row3T1.setStyle("-fx-base: red");
 		row3T1.setMinWidth(100);
 		row3T1.setMaxWidth(100);
@@ -421,12 +436,14 @@ public class NetflixApp extends Application {
 	private Pane buildTab2Content() {
 		GridPane search = new GridPane();
 		search.setVgap(5);
+		searchLabel.setStyle("-fx-base: black");
 		search.add(searchLabel, 4, 0);
 		search.add(tb1, 4,1);
 		searchEventHandler seh1 = new searchEventHandler();
 		searchButton.setStyle("-fx-base: red");
 		searchButton.setOnAction(seh1);
 		search.add(searchButton, 4,3);
+		resultLabel.setStyle("-fx-base: black");
 		search.add(resultLabel, 4, 5);
 		search.add(ta1, 4, 7);
 		searchButton.setDefaultButton(true);
@@ -435,6 +452,7 @@ public class NetflixApp extends Application {
 		ta1.setEditable(false);
 		
 		Label commonLbl = new Label("Movies in common");
+		commonLbl.setStyle("-fx-base: red");
 		search.add(commonLbl, 6, 0);
 		FlowPane common = buildCommon();
 		search.add(common, 6, 1);
@@ -446,27 +464,44 @@ public class NetflixApp extends Application {
 	
 	private FlowPane buildCommon() {
 		FlowPane common = new FlowPane();
-				
+		actBox.setStyle("-fx-base: red");
 		common.getChildren().add(actBox);
+		advBox.setStyle("-fx-base: red");
 		common.getChildren().add(advBox);
+		aniBox.setStyle("-fx-base: red");
 		common.getChildren().add(aniBox);
+		bioBox.setStyle("-fx-base: red");
 		common.getChildren().add(bioBox);
+		comBox.setStyle("-fx-base: red");
 		common.getChildren().add(comBox);
+		criBox.setStyle("-fx-base: red");
 		common.getChildren().add(criBox);
+		draBox.setStyle("-fx-base: red");
 		common.getChildren().add(draBox);
+		famBox.setStyle("-fx-base: red");
 		common.getChildren().add(famBox);
+		fanBox.setStyle("-fx-base: red");
 		common.getChildren().add(fanBox);
+		hisBox.setStyle("-fx-base: red");
 		common.getChildren().add(hisBox);
+		horBox.setStyle("-fx-base: red");
 		common.getChildren().add(horBox);
+		musBox.setStyle("-fx-base: red");
 		common.getChildren().add(musBox);
+		mysBox.setStyle("-fx-base: red");
 		common.getChildren().add(mysBox);
+		romBox.setStyle("-fx-base: red");
 		common.getChildren().add(romBox);
+		sciBox.setStyle("-fx-base: red");
 		common.getChildren().add(sciBox);
+		spoBox.setStyle("-fx-base: red");
 		common.getChildren().add(spoBox);
+		thrBox.setStyle("-fx-base: red");
 		common.getChildren().add(thrBox);
+		warBox.setStyle("-fx-base: red");
 		common.getChildren().add(warBox);
+		wesBox.setStyle("-fx-base: red");
 		common.getChildren().add(wesBox);
-		
 		return common;
 	}
 		

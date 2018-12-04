@@ -222,6 +222,12 @@ public class CircularDoublyLinkedList<E> {
 		}
 	}
 	
+	public void clear() {
+		head = null;
+		tail = null;
+		size = 0;
+	}
+	
 	public String display() {
 		StringBuilder sB = new StringBuilder();
 		sB.append("\n\t**********\n\t" + name + ": ");

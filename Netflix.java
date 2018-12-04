@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Netflix {
 	@SuppressWarnings("rawtypes") CircularDoublyLinkedList<CircularDoublyLinkedList> categories = new CircularDoublyLinkedList<CircularDoublyLinkedList>("Categories");
 	
+	CircularDoublyLinkedList<Movie> allCDLL = new CircularDoublyLinkedList<Movie>("All");
 	CircularDoublyLinkedList<Movie> act = new CircularDoublyLinkedList<Movie>("Action");
 	CircularDoublyLinkedList<Movie> adv = new CircularDoublyLinkedList<Movie>("Adventure");
 	CircularDoublyLinkedList<Movie> ani = new CircularDoublyLinkedList<Movie>("Animation");
@@ -83,11 +84,17 @@ public class Netflix {
 		}
 	}
 	
+	public ArrayList<Movie> getAll(){
+		return all;
+	}
+	
 	//This method extracts the genre string from a movie object and splits it into tokens. It then checks them against
 	//	a switch and adds the movie to each category listed
 	public void catSort(Movie m) {
 		String[] genres = m.getGenre().split(" ");
 		for (int i = 0; i < genres.length; i++) {
+			allCDLL.addLast(m);
+			
 			switch (genres[i]) {
 
 			case "act":
@@ -216,6 +223,38 @@ public class Netflix {
 			}
 		}
 		return result;
+	}
+	
+	public CircularDoublyLinkedList<Movie> linearCommonMovies(CircularDoublyLinkedList<Movie> list1, CircularDoublyLinkedList<Movie> list2){
+		CircularDoublyLinkedList<Movie> result = new CircularDoublyLinkedList<Movie>("Result");
+		Node<Movie> list1Ptr = list1.getTail();
+		Node<Movie> list2Ptr = list2.getHead();
+		String t1 = "";
+		String t2 = "";	
+		//Iterate over list1, storing the title of the movie in t1. This requires that all category lists are sorted alphabetically.
+		for(int i = 0; i < list1.getSize(); i++) {
+			list1Ptr = list1Ptr.getNext();
+			t1 = list1Ptr.getElement().getTitle();
+
+			//Set the pointer for list2 as the list2 placeholder and the title of that movie in t2
+			list2Ptr = list2.getHead();	
+			t2 = list2Ptr.getElement().getTitle();
+
+			//Iterate over list2 starting from the list2 placeholder
+			for(int j = 0; j < list2.getSize(); j++){
+				//Compare the titles of the movies
+				if(t1.compareTo(t2) == 0) { 				//Match case
+					result.addLast(list1Ptr.getElement());	//Add the movie to the result list						
+					break;									//Exit the inner loop
+				}
+				else {
+					list2Ptr = list2Ptr.getNext();
+					t2 = list2Ptr.getElement().getTitle();
+				}
+			}
+		}
+		return result;
+
 	}
 	
 	public ArrayList<Movie> searchAll(String s) {
